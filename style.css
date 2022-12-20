@@ -1,12 +1,12 @@
 body {
-    background: rgb(21, 22, 22);
-    background: linear-gradient(
-      90deg,
-      rgb(37, 37, 37) 0%,
-      rgb(72, 74, 75) 54%,
-      rgb(194, 202, 209) 82%
-    );
+    background-image: url(./images/410422.jpeg);
+    display: flex;
+    flex-direction: column;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-family: "Oswald", sans-serif;
+  }
+
+  h1{
+    color:azure
   }
