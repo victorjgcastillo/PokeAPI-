@@ -2,11 +2,96 @@ body {
     background-image: url(./images/410422.jpeg);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-family: "Oswald", sans-serif;
   }
 
   h1{
-    color:azure
+    font-size: calc(1.375rem + 1.5vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:azure;
+    font-family: 'Pokemon Solid', sans-serif;
+    padding: 20px;
   }
+
+  .pokemon_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .pokemon_block,
+.pokemon_block-back {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 10px solid rgb(253, 236, 100);
+        background: linear-gradient( 90deg, rgb(0, 0, 0) 0%, rgba(28, 31, 33, 0.75) 54%, rgba(86, 93, 99, 0.667) 82% );
+        font-family: 'Quantico', sans-serif;
+        color: rgb(255, 255, 255);
+    }
+
+img, svg {
+    vertical-align: middle;
+    /* min-width: 182%; */
+    max-height: -11px rem;
+    /* width: 100px; */
+    height: 149px;
+}
+
+.img_container {
+    background-repeat: no-repeat;
+    background-position: center;
+   
+  }
+
+
+  .pokemon-block p {
+    margin: 5px;
+  }
+  
+  .name {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.1rem;
+  }
+
+  #spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .pagination {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  
+  a.page-link {
+    font-family: 'Quantico', sans-serif;
+    position: relative;
+    display: block;
+    padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+    font-size: var(--bs-pagination-font-size);
+    color: #000000;
+    text-decoration: none;
+    background-color: #fff0;
+    border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+  

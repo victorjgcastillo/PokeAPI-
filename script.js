@@ -1,16 +1,20 @@
-const pokemonContainer = document.querySelector(".pokemon_container")
+const pokemonContainer = document.querySelector(".pokemon_container");
+const spinner = document.querySelector("#spinner");
+//traemos de primero los elementos de html (el spinner y el pokemoncontainer)
 
 function fetchPokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
     //.then (data => console.log(data)) "esta funcion sencilla fue para probar llevar a consola a solo el primer pokemon"
     .then((data) => {
-        createPokemon(data)
+        createPokemon(data);
+        spinner.style.display = "none";
     })  
 }
 //fetchPokemon(1) "prueba de imprimir en mi consola los datos de mi primer pokemon"
 
 function fetchPokemons(number){
+    spinner.style.display = "block";
     for (let index = 1; index <= number; index++) {
         fetchPokemon(index);
         
@@ -20,6 +24,7 @@ function fetchPokemons(number){
 
 //Pasamos los datos de la consola a nuestra pagina
 function createPokemon(pokemon){  
+    //creamos la tarjeta que contendran a los pokemones, con su imagen, numero y nombre
     const card = document.createElement("div")
     card.classList.add("pokemon_block")
   
@@ -46,4 +51,4 @@ function createPokemon(pokemon){
   
   }
   
-  fetchPokemons(152);
+  fetchPokemons(9);
